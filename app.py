@@ -52,4 +52,4 @@ def analyze(analysis_type):
     return jsonify({analysis_type: results.get(analysis_type, "Invalid analysis type")})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0" , port=5000)
