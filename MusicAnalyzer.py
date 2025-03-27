@@ -21,7 +21,7 @@ def get_answer(message: str, music):
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------
 class MusicPiece:
-    prompts = get_prompt("prompts\MusicPiece.yml")
+    prompts = get_prompt("prompts/MusicPiece.yml")
 
     def __init__(self, file_path: str):
         self.file = client.files.upload(file=file_path)
@@ -30,7 +30,7 @@ class MusicPiece:
         return get_answer(self.prompts["get_metadata"] , self.file).split("||")
 
 class MusicTheoryAnalyzer:
-    prompts = get_prompt("prompts\MusicTheoryAnalyzer.yml")
+    prompts = get_prompt("prompts/MusicTheoryAnalyzer.yml")
 
     def __init__(self, music: MusicPiece):
         self.music = music
@@ -62,7 +62,7 @@ class AiAnalyzer:
     
 # --------------------------------------------------------------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
-    music = MusicPiece("media\sample.mp3")
+    music = MusicPiece("media/sample.mp3")
     metadata = music.get_metadata()
     print("\nMetadata:", metadata)
 
