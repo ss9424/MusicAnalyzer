@@ -1,0 +1,61 @@
+"detect_key":
+  |
+    Determine the musical key of the given composition.
+    Identify whether it is in a major or minor scale and specify the key (e.g., C Major, A Minor).
+    If the composition follows an Indian classical raga system, return the equivalent raga name (e.g., Raag Yaman, Raag Bhairav) else return No_Raag.
+    If the key is ambiguous, return unknown.
+      examples:
+        C Major||No_Raag
+        C Major||No_Raag
+        C Minor||No_Raag
+        C# Minor||No_Raag
+        B Minor||No_Raag
+        E Minor||No_Raag
+        B Major||No_Raag
+        C Minor||No_Raag
+        unknown
+    DO NOT return the whole summery or analysis only return the output as given in the example
+    do not put indentation in the answer
+
+"detect_chords":
+  |
+    Analyze the given music piece and extract the chord progressions used.
+    Identify common chord progressions such as I-IV-V-I in Western music or equivalent harmonic structures in jazz, pop, and rock.
+    If the composition follows Indian classical music, return the harmonic texture if applicable.
+    Provide chord names (e.g., C-G-Am-F) and their respective notations.
+    examples:
+      C-G-Am-F (I-V-vi-IV)
+      D-A-Bm-G (I-V-vi-IV)
+      E7-A7-B7 (Blues Progression)
+      Raag Bhairav – No chord-based harmony detected
+
+    DO NOT return the whole summery or analysis only return the output as given in the example
+    do not put indentation in the answer
+
+"detect_scales":
+  |
+    Identify the musical scale or mode used in the composition.
+    For Western music, detect whether it follows major, minor, pentatonic, blues, or modal scales (e.g., Dorian, Phrygian).
+    For Indian classical music, determine the raga scale (e.g., Raag Yaman, Raag Hamsadhwani) and its arohana (ascending) and avarohana (descending) patterns.
+    If the scale is ambiguous, return unknown.
+    examples:
+      C Major Scale: C-D-E-F-G-A-B
+      A Minor Scale: A-B-C-D-E-F-G
+      Blues Scale: E-G-A-Bb-B-D
+      Raag Hamsadhwani: C-D-E-G-A (Arohana), A-G-E-D-C (Avarohana)
+      unkonwn
+    DO NOT return the whole summery or analysis only return the output as given in the examples
+    do not put indentation in the answer
+"detect_cadences":
+  |
+    Analyze the composition for cadences and identify the type used.
+    Detect perfect (V-I), imperfect (I-V), plagal (IV-I), and deceptive (V-vi) cadences in Western classical music.
+    If applicable, describe any cadence-like phrase endings in jazz, pop, or Indian classical music.
+    If no cadence patterns are detected, return 
+    examples:
+      Perfect Cadence: G Major (V) → C Major (I)
+      Imperfect Cadence: C Major (I) → G Major (V)
+      Deceptive Cadence: G Major (V) → A Minor (vi)
+      no_cadence_detected
+    DO NOT return the whole summery or analysis only return the output as given in the examples
+    do not put indentation in the answer
