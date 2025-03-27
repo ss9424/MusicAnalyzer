@@ -1,4 +1,4 @@
-from google import genai
+from google.generativeai import genai
 import yaml
 
 
